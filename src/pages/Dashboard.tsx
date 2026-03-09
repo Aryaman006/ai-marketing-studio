@@ -120,7 +120,7 @@ export default function Dashboard() {
         {/* Quick Actions */}
         <div>
           <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">Quick Actions</h2>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-3 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {quickActions.map((action) => (
               <Card
                 key={action.label}
