@@ -46,14 +46,14 @@ export default function Dashboard() {
 
   return (
     <DashboardLayout>
-      <div className="space-y-8 animate-fade-in">
+      <div className="space-y-6 md:space-y-8 animate-fade-in">
         {/* Welcome */}
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
-            <h1 className="text-2xl font-bold tracking-tight">
+            <h1 className="text-xl md:text-2xl font-bold tracking-tight">
               Welcome back, {profile?.full_name?.split(" ")[0] || "there"} 👋
             </h1>
-            <p className="text-sm text-muted-foreground mt-0.5">
+            <p className="text-xs md:text-sm text-muted-foreground mt-0.5">
               {activeCampaign
                 ? <>Working on <span className="text-primary font-medium">{activeCampaign.name}</span></>
                 : "Select a campaign or start creating content"
@@ -61,14 +61,14 @@ export default function Dashboard() {
             </p>
           </div>
           {!campaigns.length && (
-            <Button onClick={() => navigate("/campaigns")} className="gradient-primary text-primary-foreground">
+            <Button onClick={() => navigate("/campaigns")} className="gradient-primary text-primary-foreground w-full sm:w-auto">
               <Plus className="mr-2 h-4 w-4" />New Campaign
             </Button>
           )}
         </div>
 
         {/* Stats Row */}
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-3 md:gap-4 grid-cols-2 lg:grid-cols-4">
           <Card className="glass group hover:shadow-glow transition-shadow">
             <CardContent className="p-4">
               <div className="flex items-center justify-between mb-3">
@@ -120,7 +120,7 @@ export default function Dashboard() {
         {/* Quick Actions */}
         <div>
           <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">Quick Actions</h2>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-3 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {quickActions.map((action) => (
               <Card
                 key={action.label}
@@ -145,18 +145,18 @@ export default function Dashboard() {
         {/* Campaign CTA if none */}
         {!campaigns.length && (
           <Card className="glass border-primary/20 overflow-hidden">
-            <CardContent className="p-0">
-              <div className="flex items-center gap-6 p-6">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl gradient-primary shadow-glow">
-                  <Megaphone className="h-7 w-7 text-primary-foreground" />
+            <CardContent className="p-4 md:p-0">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 sm:p-6">
+                <div className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl gradient-primary shadow-glow">
+                  <Megaphone className="h-6 w-6 sm:h-7 sm:w-7 text-primary-foreground" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-semibold text-lg">Start with a Campaign</h3>
-                  <p className="text-sm text-muted-foreground mt-0.5">
+                  <h3 className="font-semibold text-base sm:text-lg">Start with a Campaign</h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground mt-0.5">
                     Set your brand voice, colors, and audience — then generate content that's always on-brand.
                   </p>
                 </div>
-                <Button onClick={() => navigate("/campaigns")} className="gradient-primary text-primary-foreground shrink-0">
+                <Button onClick={() => navigate("/campaigns")} className="gradient-primary text-primary-foreground shrink-0 w-full sm:w-auto">
                   <Sparkles className="mr-2 h-4 w-4" />Get Started
                 </Button>
               </div>
