@@ -145,18 +145,18 @@ export default function Dashboard() {
         {/* Campaign CTA if none */}
         {!campaigns.length && (
           <Card className="glass border-primary/20 overflow-hidden">
-            <CardContent className="p-0">
-              <div className="flex items-center gap-6 p-6">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl gradient-primary shadow-glow">
-                  <Megaphone className="h-7 w-7 text-primary-foreground" />
+            <CardContent className="p-4 md:p-0">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 sm:p-6">
+                <div className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl gradient-primary shadow-glow">
+                  <Megaphone className="h-6 w-6 sm:h-7 sm:w-7 text-primary-foreground" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-semibold text-lg">Start with a Campaign</h3>
-                  <p className="text-sm text-muted-foreground mt-0.5">
+                  <h3 className="font-semibold text-base sm:text-lg">Start with a Campaign</h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground mt-0.5">
                     Set your brand voice, colors, and audience — then generate content that's always on-brand.
                   </p>
                 </div>
-                <Button onClick={() => navigate("/campaigns")} className="gradient-primary text-primary-foreground shrink-0">
+                <Button onClick={() => navigate("/campaigns")} className="gradient-primary text-primary-foreground shrink-0 w-full sm:w-auto">
                   <Sparkles className="mr-2 h-4 w-4" />Get Started
                 </Button>
               </div>
