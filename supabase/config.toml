@@ -1,0 +1,25 @@
+project_id = "alirhgpxobskjkcmpvzg"
+
+[functions.generate-post]
+verify_jwt = false
+
+[functions.generate-landing]
+verify_jwt = false
+
+[functions.generate-blog]
+verify_jwt = false
+
+[functions.generate-asset]
+verify_jwt = false
+
+[functions.search-stock-images]
+verify_jwt = false
+
+[functions.edit-landing-ai]
+verify_jwt = false
+
+[functions.deduct-credits]
+verify_jwt = false
+
+[functions.generate-video]
+verify_jwt = false
