@@ -46,14 +46,14 @@ export default function Dashboard() {
 
   return (
     <DashboardLayout>
-      <div className="space-y-8 animate-fade-in">
+      <div className="space-y-6 md:space-y-8 animate-fade-in">
         {/* Welcome */}
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
-            <h1 className="text-2xl font-bold tracking-tight">
+            <h1 className="text-xl md:text-2xl font-bold tracking-tight">
               Welcome back, {profile?.full_name?.split(" ")[0] || "there"} 👋
             </h1>
-            <p className="text-sm text-muted-foreground mt-0.5">
+            <p className="text-xs md:text-sm text-muted-foreground mt-0.5">
               {activeCampaign
                 ? <>Working on <span className="text-primary font-medium">{activeCampaign.name}</span></>
                 : "Select a campaign or start creating content"
@@ -61,7 +61,7 @@ export default function Dashboard() {
             </p>
           </div>
           {!campaigns.length && (
-            <Button onClick={() => navigate("/campaigns")} className="gradient-primary text-primary-foreground">
+            <Button onClick={() => navigate("/campaigns")} className="gradient-primary text-primary-foreground w-full sm:w-auto">
               <Plus className="mr-2 h-4 w-4" />New Campaign
             </Button>
           )}
