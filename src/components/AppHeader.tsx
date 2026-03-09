@@ -17,7 +17,7 @@ export function AppHeader() {
   const navigate = useNavigate();
 
   return (
-    <header className="flex h-14 items-center justify-between border-b border-border/50 bg-card/50 px-4 backdrop-blur-sm">
+    <header className="flex h-14 items-center justify-between border-b border-border/50 bg-card/50 px-3 md:px-4 backdrop-blur-sm safe-top">
       <div className="flex items-center gap-3">
         <SidebarTrigger />
         <CampaignSelector />
