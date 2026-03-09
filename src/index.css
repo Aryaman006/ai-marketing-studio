@@ -83,4 +83,10 @@
   .glass {
     @apply bg-card/80 backdrop-blur-xl border border-border/50;
   }
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .safe-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
 }
