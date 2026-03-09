@@ -68,7 +68,7 @@ export default function Dashboard() {
         </div>
 
         {/* Stats Row */}
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-3 md:gap-4 grid-cols-2 lg:grid-cols-4">
           <Card className="glass group hover:shadow-glow transition-shadow">
             <CardContent className="p-4">
               <div className="flex items-center justify-between mb-3">
